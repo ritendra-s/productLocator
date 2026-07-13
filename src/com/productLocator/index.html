@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    <h1>Simple Counter</h1>
+    <h1>Simple Counter 2</h1>
     <p>Count: <span id="count">0</span></p>
 
     <button onclick="getPost()">REST EndPoint</button>
@@ -24,6 +24,7 @@
 
 
     <script>
+
         let count = 0;
 
         function increment() {
@@ -33,19 +34,20 @@
 
         function getPost() {
 
+            alert('Output of REST call 1 !!');
             const response  =  fetch(
                 "https://jsonplaceholder.typicode.com/posts/1"
             )
 
-            const post = response.json();
+            alert('Output of REST call 2a !!');
+            //const post = response.json();
 
-            alert('Output of REST call !!');
+            alert('Output of REST call 2 !!');
             document.writeln('Output of REST call');
             // console.log(post);
             // document.writeln(post);
         }
-
-
+        alert('Output of REST call 3 !!');
     </script>
 </body>
 </html>
